@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home_Pages</title>
+<link rel="stylesheet" href="style.css">
+    <style>
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+      }
+
+      header {
+        background: #2b2d42;
+        color: white;
+        display: flex;
+        align-items: center;
+        padding: 20px 0;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+     footer {
+      text-align: center;
+      padding: 20px;
+      background: #2b2d42;
+      color: white;
+      margin-top: 40px;
+     }      
+
+    header img {
+        height: 60px;
+        margin-right: 20px;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav ul li {
+        margin-right: 15px;
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 8px 12px;
+        display: block;
+      }
+
+      nav a:hover {
+        background: #555;
+      }
+
+      .container {
+        padding: 20px;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      /* Default table styles */
+      table {
+        border-collapse: collapse;
+        margin-top: 10px;
+      }
+
+      /* Full-width tables */
+      table.full-width {
+        width: 100%;
+      }
+
+      /* Fixed-width tables (e.g., 600px) */
+      table.fixed-width {
+        width: 600px;
+        margin: 10px auto;
+        /* ← This centers the table horizontally */
+      }
+
+      /* Common header and cell styles */
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: center;
+      }
+
+      /* Optional text formatting */
+      .highlight-red {
+        color: red;
+      }
+
+      .highlight-blue {
+        color: blue;
+      }
+
+      .bold-text {
+        font-weight: bold;
+      }
+
+      < !--table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: center;
+      }
+
+      >h2 {
+        margin-top: 0;
+      }
+
+      img.enlargeable {
+        transition: transform 0.3s ease;
+        cursor: pointer;
+        max-width: 100px;
+      }
+
+      img.enlargeable:hover {
+        transform: scale(1.2);
+      }
+
+      .enlarged-img {
+        width: 100%;
+        max-width: 600px;
+      }
+
+      h1 {
+        center-top: 0;
+        background-color: #FFEC00;
+      }
+
+      #home {
+        background-color: #e0f7fa;
+        padding: 20px;
+        border-radius: 8px;
+        color: #000;
+        background-image: url('images/home-bg.jpg');
+        background-size: cover;
+      }
+
+      #about {
+        background-color: #e8f5e9;
+        padding: 20px;
+        border-radius: 8px;
+        color: #000;
+        background-image: url('images/about-bg.jpg');
+        background-size: cover;
+      }
+
+      #team {
+        background-color: #fffde7;
+        padding: 20px;
+        border-radius: 8px;
+        color: #000;
+        background-image: url('images/team-bg.jpg');
+        background-size: cover;
+      }
+
+      #members {
+        background-color: #e8f5e9;
+        padding: 20px;
+        border-radius: 8px;
+        color: #000;
+        background-image: url('images/members-bg.jpg');
+        background-size: cover;
+      }
+
+      #rankings {
+        background-color: #e0f7fa;
+        padding: 20px;
+        border-radius: 8px;
+        color: #000;
+        background-image: url('images/rankings-bg.jpg');
+        background-size: cover;
+      }
+
+      #events {
+        background-color: #e3f2fd;
+        padding: 20px;
+        border-radius: 8px;
+        color: #000;
+        background-image: url('images/events-bg.jpg');
+        background-size: cover;
+      }
+
+      #gallery {
+        background-color: #e3f2fd;
+        padding: 20px;
+        border-radius: 8px;
+        color: #000;
+        background-image: url('images/gallery-bg.jpg');
+        background-size: cover;
+      }
+
+      #contact {
+        background-color: #fff3e0;
+        padding: 20px;
+        border-radius: 8px;
+        color: #000;
+        background-image: url('images/contact-bg.jpg');
+        background-size: cover;
+      }
+
+
+nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #f0f0f0;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #ffcc00;
+    }
+
+    .intro {
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #e0eafc, #cfdef3);
+      text-align: center;
+    }
+
+    .intro h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .intro p {
+      font-size: 18px;
+      color: #333;
+    }
+
+    .section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 40px 20px;
+      border: 1px solid #ddd;
+      margin: 30px auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      background: #ffffff;
+      max-width: 1100px;
+      transition: transform 0.3s;
+    }
+
+    .section:hover {
+      transform: translateY(-5px);
+    }
+
+    .section img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      flex: 1;
+    }
+
+    .section .text {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .section .text h3 {
+      font-size: 24px;
+      color: #2b2d42;
+      margin-bottom: 10px;
+    }
+
+    .section .text p {
+      font-size: 16px;
+      color: #444;
+    }
+
+    .section:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+	
+
+    </style>
+  </head>
+  <body>
+    <h1>
+      <marquee>VISAKHAPATNAM DISTRICT MASTERS TABLE TENNIS WELFARE ASSOCIATION</marquee>
+    </h1>
+    <header><img class="enlargeable" src="images/VDMTTWA_LOGO.jpg" alt="VDMTTWA Logo" width="100" />
+      <nav>
+        <ul>
+          <li><a href="#home" onclick="showPage('home')">Home</a></li>
+          <li><a href="#about" onclick="showPage('about')">About</a></li>
+          <li><a href="#team" onclick="showPage('team')">Team</a></li>
+          <li><a href="#members" onclick="showPage('members')">Members</a></li>
+          <li><a href="#rankings" onclick="showPage('rankings')">Rankings</a></li>
+          <li><a href="#events" onclick="showPage('events')">Events</a></li>
+          <li><a href="#gallery" onclick="showPage('gallery')">Gallery</a></li>
+          <li><a href="#contact" onclick="showPage('contact')">Contact</a></li>
+	</ul>
+      </nav>
+    </header>
+<main>
+    <section class="intro">
+      <h2>Welcome to Visakhapatnam District Masters Table Tennis Welfare Association</h2>
+      <p>We are passionate about promoting Table Tennis for all age groups. Explore our team, events, rankings, and more.</p>
+    </section>
+
+    <section class="section">
+      <div class="image">
+        <img src="images/home-img1.jpg" alt="Veterans Table Tennis Match">
+      </div>
+      <div class="text">
+        <h3>Passion for the Game</h3>
+        <p>VDMTTWA is dedicated to encouraging the sport of Table Tennis among veterans. We believe age is just a number when it comes to passion for sports.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="image">
+        <img src="images/home-img2.jpg" alt="Tournament Highlights">
+      </div>
+      <div class="text">
+        <h3>Our Events</h3>
+        <p>We organize regular tournaments and ranking events to engage players and recognize their efforts through a transparent point system.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="image">
+        <img src="images/home-img3.jpg" alt="Community Involvement">
+      </div>
+      <div class="text">
+        <h3>Growing Together</h3>
+        <p>Our community of players, supporters, and volunteers work together to promote the sport and foster camaraderie among players.</p>
+      </div>
+    </section>
+  </main>
+
+    <div class="container">
+      <div id="home">
+        <h2>Welcome to the website of the Visakhapatnam District Masters Table Tennis Welfare Association (VDMTTWA).</h2>
+        <p>We are passionate about promoting Table Tennis for various age groups. Explore our team, events, rankings, and more.</p>
+      </div>
+      <div id="about" class="hidden">
+        <h2>ABOUT VDMTTWA</h2>
+        <p>VDMTTWA is a community of passionate veteran table tennis players from Visakhapatnam, focused on organizing events, maintaining rankings, and supporting players above a certain age group.</p>
+      </div>
+      <div id="team" class="hidden">
+        <p>Meet the dedicated individuals behind the association who work tirelessly to bring table tennis to the forefront for veterans in the district.</p>
+        <h1>THE TEAM</h1>
+        <ul>
+          <li>President: Shri. K Sri Krishna Murthy <br><img src="images/K_Sri_Krishna_Murthy.jpg" alt="President" class="enlargeable"></li>
+          <li>Vice Presidents: Shri XXX, Shri YYY <br><img src="images/vicepresidents.jpg" alt="VP Images" class="enlargeable"></li>
+          <li>Secretary: Shri KVSN Raju <br><img src="images/KVSN_Raju.jpg" alt="Secretarye" class="enlargeable"></li>
+          <li>Joint Secretaries: 1) Shri XXX 2) Shri YYY <br><img src="images/jointsecretaries.jpg" alt="Joint Secretaries Image" class="enlargeable"></li>
+          <li>Treasurer: Shri Krishna Rao <br><img src="images/Krishna_Rao.jpg" alt="Treasurer" class="enlargeable"></li>
+          <li>Women's Representative: Smt. Nirmala <br><img src="images/womenrep.jpg" alt="Women's Rep Image" class="enlargeable"></li>
+          <li>Members: 1) XYZ 2) AAA 3) BBB 4) CCC 5) DDD <br><img src="images/members.jpg" alt="Members Image" class="enlargeable"></li>
+        </ul>
+      </div>
+      <div id="members" class="hidden">
+	<p>Explore our community of members and their contributions to the association and the sport.</p>
+        <h2>
+          <center>MEMBERS</center>
+        </h2>
+        <table class="fixed-width">
+          <tr>
+            <th>SL. No</th>
+            <th>Registered Number</th>
+            <th>Name of the Member</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>0001</td>
+            <td>KVSN Raju</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>0002</td>
+            <td>Kota Srinivas Rao</td>
+          </tr>
+          <script>
+            for (let i = 3; i <= 25; i++) {
+              document.write(`<tr><td>${i}</td><td>000${i}</td><td></td></tr>`);
+            }
+          </script>
+        </table>
+      </div>
+      <div id="rankings" class="hidden">
+        <p>Check out the latest player rankings categorized by age groups and tournament performance.</p>
+        <h3>
+          <center>Visakhapatnam District Masters Men's Table Tennis Ranking 40+ Age Category</center>
+        </h3>
+        <table class="fixed-width">
+          <tr>
+            <th>Sl No</th>
+            <th>Name of the Player</th>
+            <th>Tournaments<br></br>Participated</th>
+            <th>Points<br></br>Earned</th>
+            <th>Ranking</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>D. Sunil Satish</td>
+            <td>1</td>
+            <td>90</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>M. V. Suresh</td>
+            <td>1</td>
+            <td>60</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Dr. A. Sarwabowma</td>
+            <td>1</td>
+            <td>45</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Srinivas</td>
+            <td>1</td>
+            <td>45</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>N. Durga Prasad</td>
+            <td>1</td>
+            <td>30</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>T. Ramana Murthy</td>
+            <td>1</td>
+            <td>30</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Selva</td>
+            <td>1</td>
+            <td>30</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Sankar Santosh Kumar</td>
+            <td>1</td>
+            <td>30</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>A. K. Kishore</td>
+            <td>1</td>
+            <td>15</td>
+            <td>9</td>
+          </tr>
+          <script>
+            for (let i = 2; i <= 20; i + ) {
+              document.write(`<tr><td>${i}</td><td>000${i}</td><td></td><td></td><td></td></tr>`);
+            }
+          </script>
+        </table><br></br>
+        <h3>
+          <center>Visakhapatnam District Masters Men's Table Tennis Ranking 50+ Age Category</center>
+        </h3>
+        <table class="fixed-width">
+          <tr>
+            <th>Sl No</th>
+            <th>Name of the Player</th>
+            <th>Tournaments<br></br>Participated</th>
+            <th>Points<br></br>Earned</th>
+            <th>Ranking</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>KVSN Raju</td>
+            <td>1</td>
+            <td>90</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>B. Venu Gopal</td>
+            <td>1</td>
+            <td>60</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>B. Bhaskar</td>
+            <td>1</td>
+            <td>45</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>KVS Anil</td>
+            <td>1</td>
+            <td>45</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td></td>
+            <td>1</td>
+            <td>30</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td></td>
+            <td>1</td>
+            <td>30</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td></td>
+            <td>1</td>
+            <td>30</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td></td>
+            <td>1</td>
+            <td>30</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td></td>
+            <td>1</td>
+            <td>15</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td></td>
+            <td>1</td>
+            <td>15</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td></td>
+            <td>1</td>
+            <td>15</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td></td>
+            <td>1</td>
+            <td>15</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td></td>
+            <td>1</td>
+            <td>15</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td></td>
+            <td>1</td>
+            <td>15</td>
+            <td>9</td>
+          </tr>
+          <script>
+            for (let i = 2; i <= 20; i + ) {
+              document.write(`<tr><td>${i}</td><td>000${i}</td><td></td><td></td><td></td></tr>`);
+            }
+          </script>
+        </table>
+        <h3>
+          <center>Visakhapatnam District Masters Men's Table Tennis Ranking 60+ Age Category</center>
+        </h3>
+        <table class="fixed-width">
+          <tr>
+            <th>Sl No</th>
+            <th>Name of the Player</th>
+            <th>Tournaments<br></br>Participated</th>
+            <th>Points<br></br>Earned</th>
+            <th>Ranking</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Dr. U. Krishna Murthy</td>
+            <td>1</td>
+            <td>90</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Susheel</td>
+            <td>1</td>
+            <td>60</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Commando Prakash</td>
+            <td>1</td>
+            <td>45</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Ch. Sridhar</td>
+            <td>1</td>
+            <td>45</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>P. Srinivas</td>
+            <td>1</td>
+            <td>30</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>V. Ravi Kumar</td>
+            <td>1</td>
+            <td>30</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>KVVSV. Prasada Rao</td>
+            <td>1</td>
+            <td>30</td>
+            <td>1</td>
+          </tr>
+          <script>
+            for (let i = 2; i <= 20; i + ) {
+              document.write(`<tr><td>${i}</td><td>000${i}</td><td></td><td></td><td></td></tr>`);
+            }
+          </script>
+        </table>
+        <h3>
+          <center>Visakhapatnam District Masters Men's Table Tennis Ranking 65+ Age Category</center>
+        </h3>
+        <table class="fixed-width">
+          <tr>
+            <th>Sl No</th>
+            <th>Name of the Player</th>
+            <th>Tournaments<br></br>Participated</th>
+            <th>Points<br></br>Earned</th>
+            <th>Ranking</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>D. Narayana Murthy</td>
+            <td>1</td>
+            <td>90</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>G. Reshepu</td>
+            <td>1</td>
+            <td>60</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>A. S. Shastry</td>
+            <td>1</td>
+            <td>45</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>V. V. Ramana</td>
+            <td>1</td>
+            <td>45</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>B. R. Das</td>
+            <td>1</td>
+            <td>30</td>
+            <td>5</td>
+          </tr>
+          <script>
+            for (let i = 2; i <= 20; i + ) {
+              document.write(`<tr><td>${i}</td><td>000${i}</td><td></td><td></td><td></td></tr>`);
+            }
+          </script>
+        </table>
+        <h3>
+          <center>Visakhapatnam District Masters Men's Table Tennis Ranking 70+ Age Category</center>
+        </h3>
+        <table class="fixed-width">
+          <tr>
+            <th>Sl No</th>
+            <th>Name of the Player</th>
+            <th>Tournaments<br></br>Participated</th>
+            <th>Points<br></br>Earned</th>
+            <th>Ranking</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>J. Giridhar</td>
+            <td>1</td>
+            <td>90</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>J. L. Hussain</td>
+            <td>1</td>
+            <td>60</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>S. Prabhakar</td>
+            <td>1</td>
+            <td>45</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Ch. Gangadhar</td>
+            <td>1</td>
+            <td>45</td>
+            <td>3</td>
+          </tr>
+          <script>
+            for (let i = 2; i <= 20; i + ) {
+              document.write(`<tr><td>${i}</td><td>000${i}</td><td></td><td></td><td></td></tr>`);
+            }
+          </script>
+        </table>
+        <h3>
+          <center>Visakhapatnam District Masters Women's Table Tennis Rankings</center>
+        </h3>
+        <table class="fixed-width">
+          <tr>
+            <th>Sl No</th>
+            <th>Name of the Player</th>
+            <th>Tournaments<br></br>Participated</th>
+            <th>Points<br></br>Earned</th>
+            <th>Ranking</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>M. Nirmala</td>
+            <td>1</td>
+            <td>90</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Dara Kanthi</td>
+            <td>1</td>
+            <td>60</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Sujana Nayani</td>
+            <td>1</td>
+            <td>45</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>P. Vara Lakshmi</td>
+            <td>1</td>
+            <td>45</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Padma Swaminathan</td>
+            <td>1</td>
+            <td>30</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>A. Hima</td>
+            <td>1</td>
+            <td>30</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>V. Bharata Lakshmi</td>
+            <td>1</td>
+            <td>30</td>
+            <td>5</td>
+          </tr>
+          <script>
+            for (let i = 2; i <= 20; i + ) {
+              document.write(`<tr><td>${i}</td><td>000${i}</td><td></td><td></td><td></td></tr>`);
+            }
+          </script>
+        </table>
+      </div>
+      <div id="events" class="hidden">
+        <h2>Events</h2>
+        <p>Stay up to date with upcoming and past events including match schedules, results, and highlights.</p>
+        <p><strong>13th April 2025 - Uttarandhra Masters Table Tennis Tournament organized by VDMTTWA</strong></p><img src="images/Uttarandhra_TT.jpg" alt="Uttarandhra_TT" width="300" "class=" enlargeable">><p>Results as follows:</p>
+        <table class="fixed-width">
+          <tr>
+            <th>EVENT</th>
+            <th>SEMI-FINALISTS</th>
+            <th>RUNNER</th>
+            <th>WINNER</th>
+          </tr>
+          <tr>
+            <td>40+ Women's Singles</td>
+            <td>P. Varalakshmi (VSP)<br></br><br> Sujana Nayani (VSP)</br></td>
+            <td>Kanthi Dara (VSP)</td>
+            <td>
+              <color=red>M. Nirmala</color> (VSP)
+            </td>
+          </tr>
+          <tr>
+            <td>40+ Men's Singles</td>
+            <td>Srinivas (SKLM)<br></br><br> Dr. Sarwabowma (VSP)</br></td>
+            <td>MV Suresh (SKLM)</td>
+            <td>D Sunil Satish (VSP)</td>
+          </tr>
+          <tr>
+            <td>50+ Men's Singles</td>
+            <td>B Bhaskar (VSP)<br></br><br> KVS Anil (VSP)</br></td>
+            <td>B Venu Gopal (VSP)</td>
+            <td>KVSN Raju (VSP)</td>
+          </tr>
+          <tr>
+            <td>60+ Men's Singles</td>
+            <td>CH Sridhar (VZM)<br></br><br>Commando Prakash (VSP)</br></td>
+            <td>Susheel (VSP)</td>
+            <td>Dr U Krishna Murthy (VSP)</td>
+          </tr>
+          <tr>
+            <td>65+ Men's Singles</td>
+            <td>VV Ramana (VSP)<br></br><br> AS Shastry (VSP)</br></td>
+            <td>G Reshepu (VSP)</td>
+            <td>D Narayana Murthy (VZM)</td>
+          </tr>
+          <tr>
+            <td>70+ Men's Singles</td>
+            <td>Ch Gangadhar (Eluru)<br></br><br> S Prabhakar (VSP)</br></td>
+            <td>JL Hussian (VSP)</td>
+            <td>J Giridhar (SKLM)</td>
+          </tr>
+          <tr>
+            <td>Below 60 MEN's DOUBLES</td>
+            <td>Dr. Srinivas & Dr. Satish (VSP)<br></br><br>KVSN Raju & KVS Anil (VSP)</br>
+            <td> B Bhaskar & B Venu Gopal (VSP)</td>
+            <td>MV Suresh (SKLM) & D Sunil Satish (VSP)</td>
+          </tr>
+          <tr>
+            <td>Above 60 MEN's DOUBLES</td>
+            <td>CH Gangadhar (Eluru) & PLV Prasad (VSP)<br></br><br> AS Shastry & S Prabhakar (VSP)</br></td>
+            <td>D Narayana Murthy & CH Sridhar (VZM)</td>
+            <td>VV Ramana & G Reshepu (VSP)</td>
+          </tr>
+          <script>
+            for (let i = 1; i < 8; i + ) {
+              document.write('<tr><td></td><td></td><td></td><td></td></tr>');
+            }
+          </script>
+        </table>
+        <p><strong>23rd April 2025 - World Table Tennis Day Celebrations at RISE</strong></p><img src="images/World_TableTennis_Day.jpg" alt="World Table Tennis Day" width="300" "class=" enlargeable">
+      </div>
+      <div id="gallery" class="hidden">
+        <h2>Gallery</h2>
+        <p>Enjoy photos from our matches, events, and behind-the-scenes moments from the community.</p><img src="images/Uttarandhra_TT.jpg" alt="Uttarandhra_TT" width="300" "><img src=" images/Women_Participants.jpg" alt="Women_Participants" width="300"><img src="images/Prize_Distribution.jpg" alt="Prize_Distribution" width="300"><img src="images/Dr_Sarwabhowma.jpg" alt="Dr_Sarwabhowma" width="200"><img src="images/anil_sujana.jpg" alt="Anil & Sujana" width="200">
+      </div>
+      <div id="contact" class="hidden">
+        <h2>Contact Us</h2>
+        <p>Have questions or want to get involved? Reach out to us via email or phone for more information.</p>
+        <p>VDMTTWA, XXX Building, Seethammadhra, VIZAG - 530013</p>
+        <p>Phone: 1234512345</p>
+        <p>Email: vdmttwa@gmail.com</p>
+      </div>
+    </div>
+    <script>
+      function showPage(id) {
+        const pages = ['home', 'about', 'team', 'members', 'rankings', 'events', 'gallery', 'contact'];
+        pages.forEach(page => {
+          const el = document.getElementById(page);
+          if (el) el.classList.add('hidden');
+        });
+        const target = document.getElementById(id);
+        if (target) target.classList.remove('hidden');
+        location.hash = id;
+      }
+
+      function loadPageFromHash() {
+        const hash = location.hash.replace('#', '') || 'home';
+        showPage(hash);
+      }
+      window.onload = loadPageFromHash;
+    </script>
+    <footer>
+      <p>&copy; 2025 VDMTTWA. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
